@@ -24,3 +24,17 @@
     %span.glyphicon.glyphicon-chevron-left
   %a.right.carousel-control{:href => "#myCarousel", "data-slide" => "next"}
     %span.glyphicon.glyphicon-chevron-right
+.text-center
+  %br/
+  = simple_form_for @visitor do |f|
+    = f.error_notification
+    .container
+      .row
+        .col-md-4.col-md-offset-4
+          = f.input :favorite, :collection => Visitor::IMAGE_LABELS, label: false, as: :select, prompt: 'Select a favorite ...'
+      .row
+        .col-md-4.col-md-offset-4
+          = f.input :comment, label: false, :placeholder => 'Add a comment ...', :class => "col-md-12"
+      .row
+        .col-md-4.col-md-offset-4
+          = f.submit "Choose!", :class => "btn btn-primary"
