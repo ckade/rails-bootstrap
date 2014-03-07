@@ -15,14 +15,13 @@ gem 'google_drive'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'pg'
+gem 'unicorn'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'thin'
 end
 group :production do
-  gem 'unicorn'
   gem 'rails_12factor'
 end
